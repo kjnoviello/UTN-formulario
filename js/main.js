@@ -2,29 +2,22 @@ const typeAssured = document.getElementById("typeAssured");
 const optionBasico = document.getElementById("optionBasico");
 const optionIntermedio = document.getElementById("optionIntermedio");
 const optionPremium = document.getElementById("optionPremium");
+const btnSubmit = document.getElementById("submit");
 
-typeAssured.addEventListener("change", function(){
-    if (typeAssured.value === "basico") {
-        optionBasico.style.display = "flex"
-    } else {
-        optionBasico.style.display = "none";
-    }
-})
+typeAssured.addEventListener("change", function () {
+    optionBasico.style.display = typeAssured.value === "basico" ? "flex" : "none";
+    optionIntermedio.style.display = typeAssured.value === "intermedio" ? "flex" : "none";
+    optionPremium.style.display = typeAssured.value === "premium" ? "flex" : "none";
+});
 
-typeAssured.addEventListener("change", function(){
-    if (typeAssured.value === "intermedio") {
-        optionIntermedio.style.display = "flex"
-    } else {
-        optionIntermedio.style.display = "none";
-    }
-})
+function send (e){
+    e.preventDefault()
+    Swal.fire({
+        title: 'Done',
+        icon: 'success',
+        text: 'Form send!',
+        confirmButtonText: 'Back'
+    })
+}
 
-typeAssured.addEventListener("change", function(){
-
-    if (typeAssured.value === "premium") {
-        optionPremium.style.display = "flex"
-    } else {
-        optionPremium.style.display = "none"
-    }
-})
-
+btnSubmit.addEventListener("click", send )

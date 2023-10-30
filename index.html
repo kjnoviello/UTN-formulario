@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 1 - ejercitacion</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div>
-        <div>
+    <div class="container">
+        <div class="container">
             <h1>Seguros No Pagamos Cooperativa</h1>
             <form action="">
                 <label for="nombre">Nombre</label>
-                <input type="text" for="nombre" placeholder="John">
+                <input type="text" for="nombre" placeholder="John" required>
                 <label for="apellido">Apellido</label>
-                <input type="text" for="apellido" placeholder="Doe">
+                <input type="text" for="apellido" placeholder="Doe" required>
                 <label for="dni">DNI</label>
-                <input type="number" for="dni" placeholder="20555897">
+                <input type="number" for="dni" placeholder="20555897" required>
                 <label for="email">Email</label>
-                <input type="email" for="email" placeholder="johndoe@example.com">
+                <input type="email" for="email" placeholder="johndoe@example.com" required>
                 <label for="telefono">Teléfono</label>
-                <input type="number" for="telefono" placeholder="1144447777">
+                <input type="number" for="telefono" placeholder="1144447777" required>
                 <label for="type">Tipo de Seguro</label>
-                <select id="typeAssured" id="typeAssured">
+                <select id="typeAssured" id="typeAssured" required>
                     <option value="basico">Básico</option>
                     <option value="intermedio" selected>Intermedio</option>
                     <option value="premium">Premium</option>
@@ -43,10 +44,12 @@
                     </div>
                 </div>
                 <br>
-                <button type="submit"><strong>Enviar</strong></button>
+                <button type="submit" id="submit"><strong>Enviar</strong></button>
             </form>
         </div>
     </div>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="./js/main.js"></script>
+    <!-- <script src="sweetalert2.min.js"></script> -->
 </body>
 </html>

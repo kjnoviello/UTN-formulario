@@ -7,7 +7,7 @@ body {
     background-repeat: no-repeat;
 }
 
-body div {
+.container{
     backdrop-filter: blur(10px);
     background-color: rgba(238, 238, 238, 0.151);
     padding: 20px;
@@ -62,8 +62,8 @@ input, select{
     background: linear-gradient(359deg, rgb(158 155 155) 0%, rgba(255, 255, 255, 1) 100%);
     border-style: none;
     border-bottom: rgb(95, 94, 94) solid 2px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-radius: 10px;
+
 }
 
 .checkDiv{
