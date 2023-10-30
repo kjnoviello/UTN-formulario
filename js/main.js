@@ -11,13 +11,41 @@ typeAssured.addEventListener("change", function () {
 });
 
 function send (e){
-    e.preventDefault()
-    Swal.fire({
-        title: 'Done',
-        icon: 'success',
-        text: 'Form send!',
-        confirmButtonText: 'Back'
-    })
+    const name = document.getElementById("nombre")
+    const apellido = document.getElementById("apellido")
+    const dni = document.getElementById("dni")
+    const email = document.getElementById("email")
+    const telefono = document.getElementById("telefono")
+    if (name.value==="" || apellido.value==="" || dni.value==="" || email.value==="" || telefono.value==="" || typeAssured.value==="") {
+        Swal.fire({
+            icon: 'info',
+            title: 'Por favor, completar el formulario',
+            toast: true,
+            position: "center",
+            timer: 1500,
+            showConfirmButton: false,
+            timerProgressBar: true,
+        })
+    } else {
+        Swal.fire({
+            title: 'Genial!',
+            icon: 'success',
+            text: 'Formulario enviado... Gracias!',
+            confirmButtonText: 'Volver',
+            timer: 2000,
+            showConfirmButton: false,
+        })
+        e.preventDefault()
+        name.value = "" 
+        apellido.value = "" 
+        dni.value = "" 
+        email.value = ""
+        telefono.value = ""
+        typeAssured.value = ""
+        optionBasico.style.display="none"
+        optionIntermedio.style.display="none"
+        optionPremium.style.display="none"
+    }
 }
 
-btnSubmit.addEventListener("click", send )
+btnSubmit.addEventListener("click", send)

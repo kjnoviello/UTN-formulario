@@ -43,6 +43,7 @@ button[type="submit"]{
     border-radius: 5px;
     color: white;
 }
+
 button:hover{
     background-color: white;
     color:rgb(48, 48, 48);
@@ -63,7 +64,6 @@ input, select{
     border-style: none;
     border-bottom: rgb(95, 94, 94) solid 2px;
     border-radius: 10px;
-
 }
 
 .checkDiv{
