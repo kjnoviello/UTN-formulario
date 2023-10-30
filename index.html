@@ -22,25 +22,31 @@
                 <label for="telefono">Teléfono</label>
                 <input type="number" for="telefono" placeholder="1144447777">
                 <label for="type">Tipo de Seguro</label>
-                <div class="checkDiv">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="checkDiv">
+                <select id="typeAssured" id="typeAssured">
+                    <option value="basico">Básico</option>
+                    <option value="intermedio" selected>Intermedio</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <div id="optionBasico">
                     <div>
                         <p>Básico: $500</p>
                     </div>
+                </div>
+                <div id="optionIntermedio">
                     <div>
                         <p>Intermedio: $1000</p>
                     </div>
+                </div>
+                <div id="optionPremium">
                     <div>
                         <p>Premium: $1500</p>
                     </div>
                 </div>
-                <button type="submit">Enviar</button>
+                <br>
+                <button type="submit"><strong>Enviar</strong></button>
             </form>
         </div>
     </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ body div {
     background-color: rgba(238, 238, 238, 0.151);
     padding: 20px;
     border-radius: 10px;
-    max-width: 150vh;
+    max-width: 120vh;
     margin: auto;
 }
 
@@ -25,7 +25,7 @@ form{
     margin: auto;
     display: flex;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 80%;
     justify-content: center;
 }
 
@@ -39,21 +39,38 @@ button[type="submit"]{
     width: 100px;
     justify-content: center;
     margin: 10px;
+    background-color: rgb(122 73 39);
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color:rgb(48, 48, 48);
+    transition: all 0.3s ease;
+    font-weight: 700;
 }
 
 label{
     padding: 5px;
     display: initial;
     text-align: center;
-    font-weight: 700;
 }
 
-input{
+input, select{
     margin: 8px;
-    height: 30px;
+    height: 40px;
+    background: linear-gradient(359deg, rgb(158 155 155) 0%, rgba(255, 255, 255, 1) 100%);
+    border-style: none;
+    border-bottom: rgb(95, 94, 94) solid 2px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .checkDiv{
     display: flex;
     flex-direction: row;
+}
+
+#optionBasico, #optionIntermedio, #optionPremium {
+    display: none;
 }
